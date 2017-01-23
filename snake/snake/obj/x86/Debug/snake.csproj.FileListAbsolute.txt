@@ -1,0 +1,5 @@
+C:\Documents and Settings\Admin\Рабочий стол\ВАС\snake\snake\snake\bin\Debug\snake.exe
+C:\Documents and Settings\Admin\Рабочий стол\ВАС\snake\snake\snake\bin\Debug\snake.pdb
+C:\Documents and Settings\Admin\Рабочий стол\ВАС\snake\snake\snake\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Рабочий стол\ВАС\snake\snake\snake\obj\x86\Debug\snake.exe
+C:\Documents and Settings\Admin\Рабочий стол\ВАС\snake\snake\snake\obj\x86\Debug\snake.pdb
