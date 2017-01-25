@@ -5,25 +5,17 @@ using System.Text;
 
 namespace snake
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
-        List<point> plist;
+        
 
-        public VerticalLine(int xTop, int xButton, int x, char sym)
+        public VerticalLine(int xTop, int xBotton, int x, char sym)
         {
             plist = new List<point>();
-            for (int y = xTop; y <= xButton; y++)
+            for (int y = xTop; y <= xBotton; y++)
             {
                 point p = new point(x, y, sym);
                 plist.Add(p);
-            }
-        }
-
-        public void Drow()
-        {
-            foreach (point p in plist)
-            {
-                p.Draw();
             }
         }
     }
