@@ -12,6 +12,7 @@ namespace snake
     {
         static void Main(string[] args)
         {
+
             Console.SetBufferSize(80, 25);
 
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, 'x');
@@ -23,13 +24,28 @@ namespace snake
             leftLine.Drow();
             righttLine.Drow();
 
-
             point p = new point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
 
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            point food = foodCreator.CreateFood();
+            food.Draw();
+
             while (true)
             {
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
