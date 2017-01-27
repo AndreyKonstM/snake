@@ -16,12 +16,12 @@ namespace snake
          
         }
 
-        public point(int _x, int _y, char _sym)
-        {
-            x = _x;
-            y = _y;
-            sym = _sym;
-        }
+       public point(int x, int y, char sym)
+		{
+			this.x = x;
+			this.y = y;
+			this.sym = sym;
+		}
 
         public point(point p)
         {
@@ -65,6 +65,11 @@ namespace snake
         {
             sym = ' ';
             Draw();
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
     }
 }

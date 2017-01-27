@@ -19,14 +19,14 @@ namespace snake
             HorizontalLine downLine = new HorizontalLine(0, 78, 24, 'x');
             VerticalLine leftLine = new VerticalLine(0, 24, 0, 'x');
             VerticalLine righttLine = new VerticalLine(0, 24, 78, 'x');
-            upLine.Drow();
-            downLine.Drow();
-            leftLine.Drow();
-            righttLine.Drow();
+            upLine.Draw();
+            downLine.Draw();
+            leftLine.Draw();
+            righttLine.Draw();
 
             point p = new point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
-            snake.Drow();
+            snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
             point food = foodCreator.CreateFood();
@@ -51,8 +51,7 @@ namespace snake
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
-                Thread.Sleep(100);
-                snake.Move();
+               
             }
             
 
